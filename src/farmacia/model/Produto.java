@@ -1,7 +1,6 @@
 package farmacia.model;
 
 public class Produto {
-	// Atributos
     private String nome;
     private String fabricante;
     private double preco;
@@ -9,7 +8,6 @@ public class Produto {
     private int quantidadeEstoque;
     private String tipoProduto;
 
-    // Construtor
     public Produto(String nome, String fabricante, double preco, String idProduto, int quantidadeEstoque, String tipoProduto) {
         this.nome = nome;
         this.fabricante = fabricante;
@@ -19,7 +17,6 @@ public class Produto {
         this.tipoProduto = tipoProduto;
     }
 
-    // Métodos para exibir informações
     public void exibirInfo() {
         System.out.println("--- Informações do Produto ---");
         System.out.println("Nome: " + nome);
@@ -30,8 +27,19 @@ public class Produto {
         System.out.println("Tipo: " + tipoProduto);
     }
     
-    // Métodos Getters (para acessar os atributos privados)
-    public String getIdProduto() {
-        return idProduto;
-    }
+    // Getters
+    public String getNome() { return nome; }
+    public String getFabricante() { return fabricante; }
+    public double getPreco() { return preco; }
+    public String getIdProduto() { return idProduto; }
+    public int getQuantidadeEstoque() { return quantidadeEstoque; }
+    public String getTipoProduto() { return tipoProduto; }
+    
+    // Setters
+    public void setNome(String nome) { this.nome = nome; }
+    public void setFabricante(String fabricante) { this.fabricante = fabricante; }
+    public void setPreco(double preco) { this.preco = preco; }
+    public void setQuantidadeEstoque(int quantidadeEstoque) { this.quantidadeEstoque = quantidadeEstoque; }
+    public void setTipoProduto(String tipoProduto) { this.tipoProduto = tipoProduto; }
+    // Nota: O ID geralmente não é alterado, por isso não tem um 'setter'.
 }
