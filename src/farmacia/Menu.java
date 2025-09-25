@@ -15,7 +15,7 @@ public class Menu {
 
         // Instanciar Objetos das Classes Filhas para demonstração
         System.out.println(Cores.TEXT_CYAN_BOLD + "*****************************************************");
-        System.out.println("  Testes da Classe de Herança - Farmácia ");
+        System.out.println("  Classe de Herança - Farmácia ");
         System.out.println("*****************************************************" + Cores.TEXT_RESET);
 
         Medicamento m1 = new Medicamento(1, "Dorflex", 15.99f, 50, "Dipirona Monoidratada");
