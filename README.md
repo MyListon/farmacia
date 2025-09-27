@@ -2,7 +2,7 @@
 
 ## 📄 Descrição do Projeto
 
-Este projeto é uma **Atividade Prática (Recap Review)** focada na aplicação dos pilares da **Programação Orientada a Objetos (POO)** em Java. O objetivo foi construir um sistema simples de gestão (**CRUD** - Create, Read, Update, Delete) para o estoque de uma farmácia, utilizando classes abstratas, herança e interfaces.
+Este projeto é uma **Atividade Prática** focada na aplicação dos pilares da **Programação Orientada a Objetos (POO)** em Java. O objetivo foi construir um sistema simples de gestão (**CRUD** - Create, Read, Update, Delete) para o estoque de uma farmácia, utilizando classes abstratas, herança e interfaces.
 
 O Menu principal fornece operações completas de cadastro, consulta, atualização e exclusão de produtos, que são armazenados em uma coleção em memória (`ArrayList`).
 
@@ -53,7 +53,7 @@ O sistema oferece as seguintes operações, que são implementadas nos métodos 
 
 1.  **Clone o Repositório:**
     ```bash
-    git clone [link-do-seu-repositorio]
+    git clone https://github.com/MyListon/farmacia.git
     ```
 2.  **Importe para o IDE:**
     * Abra seu IDE (Eclipse, VSCode, etc.).
