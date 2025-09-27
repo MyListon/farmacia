@@ -2,20 +2,21 @@ package farmacia.model;
 
 public class Medicamento extends Produto {
     
-    private String principioAtivo;
+    private String generico; // Atributo '-generico: String' [cite: 27]
 
-    public Medicamento(int id, String nome, float preco, int quantidade, String principioAtivo) {
-        super(id, nome, preco, 1, quantidade); // A categoria 1 é fixa para Medicamento
-        this.principioAtivo = principioAtivo;
+    public Medicamento(int id, String nome, float preco, String generico) {
+        super(id, nome, preco, 1); // Categoria/Tipo 1 é fixo para Medicamento
+        this.generico = generico;
     }
 
-    public String getPrincipioAtivo() { return principioAtivo; }
-    public void setPrincipioAtivo(String principioAtivo) { this.principioAtivo = principioAtivo; }
+    // Getters e Setters (conforme o diagrama) [cite: 28, 29]
+    public String getGenerico() { return generico; }
+    public void setGenerico(String generico) { this.generico = generico; }
     
     @Override
-    public void visualizar() {
-        super.visualizar(); // Chama o método visualizar da classe pai
-        System.out.printf("Princípio Ativo: %s%n", this.principioAtivo);
+    public void visualizar() { // Implementa o método visualizar() [cite: 30]
+        super.visualizar(); 
+        System.out.printf("Princípio Ativo (Genérico): %s%n", this.generico);
         System.out.println("----------------------------------------");
     }
 }

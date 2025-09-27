@@ -1,24 +1,22 @@
 package farmacia.model;
 
-public class Produto {
+public abstract class Produto {
     
-    // Atributos da classe
+    // Atributos da Super Classe (conforme o diagrama)
     private int id;
     private String nome;
     private float preco;
-    private int categoria;
-    private int quantidade;
+    private int tipo; // Corresponde à 'categoria' que você usou, mas 'tipo' está no diagrama [cite: 15]
 
     // Construtor
-    public Produto(int id, String nome, float preco, int categoria, int quantidade) {
+    public Produto(int id, String nome, float preco, int tipo) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
-        this.categoria = categoria;
-        this.quantidade = quantidade;
+        this.tipo = tipo;
     }
     
-    // Métodos Getters e Setters
+    // Métodos Getters e Setters (conforme o diagrama)
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -28,35 +26,26 @@ public class Produto {
     public float getPreco() { return preco; }
     public void setPreco(float preco) { this.preco = preco; }
 
-    public int getCategoria() { return categoria; }
-    public void setCategoria(int categoria) { this.categoria = categoria; }
+    public int getTipo() { return tipo; } // Alterado de 'getCategoria' para 'getTipo'
+    public void setTipo(int tipo) { this.tipo = tipo; } // Alterado de 'setCategoria' para 'setTipo'
 
-    public int getQuantidade() { return quantidade; }
-    public void setQuantidade(int quantidade) { this.quantidade = quantidade; }
-    
-    // Método para simular a retirada de estoque
-    public boolean total(int quantidadeRetirada) {
-        if (this.quantidade < quantidadeRetirada) {
-            System.out.println("\nQuantidade Insuficiente!");
-            return false;
-        }
-        this.quantidade -= quantidadeRetirada;
-        return true;
-    }
-
+    /**
+     * Exibe as informações básicas do Produto.
+     * Este método será chamado pelas subclasses.
+     */
     public void visualizar() {
-        String tipoCategoria = "";
-        switch (this.categoria) {
-            case 1 -> tipoCategoria = "Medicamento";
-            case 2 -> tipoCategoria = "Cosmético";
-            default -> tipoCategoria = "Desconhecido";
+        String tipoProduto = "";
+        switch (this.tipo) {
+            case 1 -> tipoProduto = "Medicamento"; // 1 para Medicamento
+            case 2 -> tipoProduto = "Cosmético"; // 2 para Cosmético
         }
 
+        System.out.println("\n----------------------------------------");
+        System.out.println("          Dados do Produto            ");
         System.out.println("----------------------------------------");
         System.out.printf("ID: %d%n", this.id);
         System.out.printf("Produto: %s%n", this.nome);
+        System.out.printf("Tipo: %s%n", tipoProduto);
         System.out.printf("Preço: R$ %.2f%n", this.preco);
-        System.out.printf("Categoria: %s%n", tipoCategoria);
-        System.out.printf("Quantidade em estoque: %d%n", this.quantidade);
     }
 }
