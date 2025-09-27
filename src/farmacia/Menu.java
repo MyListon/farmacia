@@ -18,7 +18,7 @@ public class Menu {
         
         // Dados de exemplo, usando o novo construtor (sem quantidade)
         produtoController.criarProduto(new Medicamento(produtoController.gerarId(), "Dipirona", 5.99f, "Dipirona Monoidratada"));
-        produtoController.criarProduto(new Cosmetico(produtoController.gerarId(), "Protetor Solar FPS 30", 35.00f, "Toques Secos"));
+        produtoController.criarProduto(new Cosmetico(produtoController.gerarId(), "Protetor Solar FPS 30", 35.00f, "Toque Seco"));
         
         int opcao;
         
@@ -26,7 +26,7 @@ public class Menu {
         while (true) {
             System.out.println(Cores.TEXT_CYAN + Cores.ANSI_BLACK_BACKGROUND + "*****************************************************");
             System.out.println("                                                     ");
-            System.out.println("                 Farmácia do Campo                   ");
+            System.out.println("                 Farmácia da Ada                     ");
             System.out.println("                                                     ");
             System.out.println("*****************************************************");
             System.out.println("                                                     ");
