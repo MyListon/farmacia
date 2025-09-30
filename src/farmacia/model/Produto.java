@@ -38,6 +38,7 @@ public abstract class Produto {
         switch (this.tipo) {
             case 1 -> tipoProduto = "Medicamento"; // 1 para Medicamento
             case 2 -> tipoProduto = "Cosmético"; // 2 para Cosmético
+            default -> tipoProduto = "Inválido";
         }
 
         System.out.println("\n----------------------------------------");
